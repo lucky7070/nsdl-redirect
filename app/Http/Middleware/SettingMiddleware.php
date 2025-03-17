@@ -11,15 +11,15 @@ class SettingMiddleware
 {
     public function handle(Request $request, Closure $next)
     {
-        // $data = Setting::select('setting_name', 'filed_value')->get()->pluck('filed_value', 'setting_name')->toArray();
-        // if (!$request->is('api/*')) {
-        //     View::share('site_settings', $data);
-        //     View::share('config', [
-        //         //   
-        //     ]);
-        // }
+        $data = Setting::select('setting_name', 'filed_value')->get()->pluck('filed_value', 'setting_name')->toArray();
+        if (!$request->is('api/*')) {
+            View::share('site_settings', $data);
+            View::share('config', [
+                //   
+            ]);
+        }
 
-        // $request->merge(['site_settings' => $data]);
+        $request->merge(['site_settings' => $data]);
         return $next($request);
     }
 }
