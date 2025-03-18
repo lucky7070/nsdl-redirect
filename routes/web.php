@@ -39,3 +39,4 @@ Route::middleware(['authCheck'])->group(function () {
 Route::fallback(function () {
     abort(404);
 });
+Route::get('/pan_card_service',[CommonController::class,'panCardService'])->name('pan-card-service');
