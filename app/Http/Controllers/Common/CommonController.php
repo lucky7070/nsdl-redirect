@@ -15,6 +15,8 @@ class CommonController extends Controller
         if ($request->file('image')) {
             $image = Helper::saveFile($request->file('image'), 'images');
             return asset('storage/' . $image);
+        }else {
+            return '';
         }
     }
 
