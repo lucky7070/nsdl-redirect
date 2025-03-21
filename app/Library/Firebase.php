@@ -13,23 +13,23 @@ class Firebase
             $SERVER_API_KEY = config('constant.firebase_key');
 
             $data = [
-                "registration_ids"  => $fcm_ids,
-                "notification"  => [
-                    "title"     => $title,
-                    "body"      => $message,
-                    "subtitle"  => "subtitle",
-                    "color"     => "#4361ee",
-                    "image"     => $image
+                "registration_ids" => $fcm_ids,
+                "notification" => [
+                    "title" => $title,
+                    "body" => $message,
+                    "subtitle" => "subtitle",
+                    "color" => "#4361ee",
+                    "image" => $image
                 ],
             ];
 
             $http = Http::withHeaders([
-                'Authorization'     => 'key=' . $SERVER_API_KEY,
-                'Content-Type'      => 'application/json',
+                'Authorization' => 'key=' . $SERVER_API_KEY,
+                'Content-Type' => 'application/json',
             ])->post($SERVER_API_URL, $data);
 
-            return  $http->json();
-        } catch (\Exception  $e) {
+            return $http->json();
+        } catch (\Exception $e) {
             return false;
         }
     }
@@ -39,17 +39,9 @@ class Firebase
     {
         if ($fcm_id) {
             switch ($template) {
-                case 1:
-                    $title      = "Payment Request :: Approved.";
-                    $message    = "Your Payment Request has been Approved.";
-                    break;
-                case 2:
-                    $title      = "Payment Request :: Rejected.";
-                    $message    = "Your Payment Request has been Rejected.";
-                    break;
                 default:
-                    $title      = "";
-                    $message    = "";
+                    $title = "";
+                    $message = "";
                     break;
             }
 

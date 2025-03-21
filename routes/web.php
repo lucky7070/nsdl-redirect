@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\FireController;
@@ -16,10 +17,12 @@ use App\Http\Controllers\Common\CommonController;
 |
 */
 
-Route::view('/', 'welcome')->name('home');
+Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::get('/create-pan', [FrontendController::class, 'create'])->name('create-pan');
+Route::get('/return', [FrontendController::class, 'return'])->name('return-pan');
 
 Route::get('test', [CommonController::class, 'test'])->name('test');
-Route::get('{guard}', fn ($guard) => redirect($guard == 'admin' ?  url('/admin/login') : url("/$guard/login")))->whereIn('guard', ['admin']);
+Route::get('{guard}', fn($guard) => redirect($guard == 'admin' ? url('/admin/login') : url("/$guard/login")))->whereIn('guard', ['admin']);
 Route::redirect('admin/dashboard', '/dashboard');
 
 
@@ -34,4 +37,4 @@ Route::middleware(['authCheck'])->group(function () {
 Route::fallback(function () {
     abort(404);
 });
-Route::get('/pan_card_service',[CommonController::class,'panCardService'])->name('pan-card-service');
+Route::get('/pan_card_service', [CommonController::class, 'panCardService'])->name('pan-card-service');
