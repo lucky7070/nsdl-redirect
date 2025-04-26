@@ -1,145 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+    --theme-color: #2e2751;
 }
 
-.header {
-  background: #f58f2d;
-  padding: 10px;
-  text-align: center;
-  position: sticky;
-  top: 0;
+.logo {
+    filter: brightness(0) invert(1);
+    height: 50px;
 }
 
-.heading {
-  text-align: right;
-  width: fit-content;
+.bg-theme {
+    background-color: var(--theme-color);
 }
 
-.heading h2,
-.heading h4 {
-  margin: 0;
-  line-height: 30px;
-}
-.sub-header-section {
-  background-color: #f7f6ed;
-  border-bottom: 2px solid #dddddd;
-}
-
-.fs-14 {
-  font-size: 13px;
-}
-
-.fw-500 {
-  font-weight: 500;
-}
-.fw-400 {
-  font-weight: 400;
-}
-.text-small {
-  font-size: 15px;
-  line-height: 25px;
-}
-.border-green {
-  border-bottom: 2px solid #037991;
-}
-.text-center {
-  text-align: center;
-}
-.apply-button-link {
-  text-decoration: none;
-}
-
-.apply-button {
-  background-color: #037991;
-  border: 2px solid #035f71;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  font-size: 16px;
-  margin: 0 auto;
-  cursor: pointer;
-}
-.text-black {
-  color: #000;
-  font-weight: 600;
-}
-
-.bg-maroon {
-  background-color: #451511;
-}
-.padding-20 {
-  padding: 18px 0;
-}
-.margin-0 {
-  margin: 0;
-}
-.apply-icon {
-  padding-right: 5px;
-}
-.triangle-button {
-  position: relative !important;
-  width: 0;
-  height: 0;
-  margin: auto;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 40px solid #451511;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.up-icon {
-  position: absolute !important;
-  color: #fff !important;
-  font-size: 18px !important;
-  top: 20px !important;
-}
-.footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 14px;
-}
-
-.fw-600 {
-  font-weight: 600;
-}
-
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1200px !important;
-  }
-}
-
-@media (min-width: 1200px) and (max-width: 1400px) {
-  .container {
-    max-width: 1200px !important;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-  .container {
-    max-width: 1200px !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .container {
-    max-width: 992px !important;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  .container {
-    max-width: 768px !important;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 576px) {
-  .container {
-    max-width: 576px !important;
-  }
+.text-theme {
+    color: var(--theme-color);
 }

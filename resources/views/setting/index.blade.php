@@ -191,12 +191,12 @@
 				application_name: {
 					required: true,
 					minlength: 2,
-					maxlength: 50,
+					maxlength: 100,
 				},
 				copyright: {
 					required: true,
 					minlength: 2,
-					maxlength: 150,
+					maxlength: 100,
 				},
 				address: {
 					required: true,
@@ -222,17 +222,17 @@
 				application_name: {
 					required: "Please enter Application name",
 					minlength: "Application Name must consist of at least 2 characters.",
-					maxlength: "Application Name must not exceed characters limit 50.",
+					maxlength: "Application Name must not exceed characters limit 100.",
 				},
 				copyright: {
 					required: "Please enter copyright information",
 					minlength: "copyright information must consist of at least 2 characters.",
-					maxlength: "copyright information must not exceed characters limit 50.",
+					maxlength: "copyright information must not exceed characters limit 100.",
 				},
 				address: {
 					required: "Please enter Address",
 					minlength: "Address must consist of at least 2 characters.",
-					maxlength: "Address must not exceed characters limit 50.",
+					maxlength: "Address must not exceed characters limit 100.",
 				},
 				email: {
 					required: "Please enter your email address",
@@ -273,7 +273,7 @@
 					minlength: 2,
 					maxlength: 100,
 				},
-				linkdin: {
+				linkedin: {
 					required: true,
 					minlength: 2,
 					maxlength: 100,
@@ -295,8 +295,8 @@
 					minlength: "Link must consist of at least 2 characters.",
 					maxlength: "Link must not exceed characters limit 100.",
 				},
-				linkdin: {
-					required: "Please enter Linkdin link",
+				linkedin: {
+					required: "Please enter linkedin link",
 					minlength: "Link must consist of at least 2 characters.",
 					maxlength: "Link must not exceed characters limit 100.",
 				},

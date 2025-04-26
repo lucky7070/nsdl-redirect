@@ -54,7 +54,7 @@ class SettingController extends Controller
                 $request->validate([
                     'facebook'      => 'required|max:100',
                     'twitter'       => 'required|max:100',
-                    'linkdin'       => 'required|max:100',
+                    'linkedin'      => 'required|max:100',
                     'instagram'     => 'required|max:100',
                 ]);
             }
