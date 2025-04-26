@@ -5,13 +5,7 @@
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://www.pan.utiitsl.com/PAN/resources/images/common.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://www.pan.utiitsl.com/PAN/resources/images/common.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://www.pan.utiitsl.com/PAN/resources/images/common.jpg" class="d-block w-100" alt="...">
+                    <img src="{{ asset('assets/img/banner.jpg') }}" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
