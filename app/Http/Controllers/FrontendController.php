@@ -18,11 +18,11 @@ class FrontendController extends Controller
         try {
             $pancard = Pancard::create();
             $formValue = [
-                "encryptedRequest" => $pancard['encryptionOutput'],
-                "Signature" => $pancard['signature'],
-                "entityCode" => config('ayt.pan-card-service.entityCode'),
-                "transactionId" => $pancard['transactionId'],
-                "authKey" => $pancard['authKey'],
+                "encryptedRequest"  => $pancard['encryptionOutput'],
+                "Signature"         => $pancard['signature'],
+                "entityCode"        => config('ayt.pan-card-service.entityCode'),
+                "transactionId"     => $pancard['transactionId'],
+                "authKey"           => $pancard['authKey'],
             ];
 
             return view('frontend.redirect', compact('formValue'));

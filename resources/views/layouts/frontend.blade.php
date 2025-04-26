@@ -22,21 +22,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('storage/' . $site_settings['favicon']) }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/' . $site_settings['favicon']) }}" />
 
+
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/toastr/toastr.min.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class='heading'>
-                <h5 class="mb-0 fw-600">Online PAN Card Apply</h5>
-                <h6 class="fw-600">By NSDL</h6>
-            </div>
-        </div>
-    </header>
-    <main style="min-height: calc(100vh - 200px);">
+    <main>
         @yield('content')
     </main>
 
