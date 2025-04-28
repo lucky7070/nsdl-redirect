@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Library\Pancard;
+use App\Models\Log;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 
@@ -24,6 +25,11 @@ class FrontendController extends Controller
                 "transactionId"     => $pancard['transactionId'],
                 "authKey"           => $pancard['authKey'],
             ];
+
+            Log::create([
+                'ip'        => $request->ip(),
+                'txn_id'    => str($pancard['transactionId'])->explode(':')->get(1),
+            ]);
 
             return view('frontend.redirect', compact('formValue'));
         } catch (\Throwable $th) {
