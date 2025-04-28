@@ -29,7 +29,7 @@
                 <div class="card mb-4 shadow-sm rounded-4 text-white">
                     <a href="{{ route('create-pan')  }}" class="card-body text-decoration-none rounded-4 bg-theme">
                         <h4 class="my-3 fw-normal">Apply for New PAN Card (Form 49A)</h4>
-                        <button type="button" class="w-100 btn btn-lg border text-white">Apply Now</button>
+                        <button type="button" class="btn border text-white">Apply Now</button>
                     </a>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                 <div class="card mb-4 shadow-sm rounded-4 text-white">
                     <a href="{{ route('create-pan')  }}" class="card-body text-decoration-none rounded-4 bg-theme">
                         <h4 class="my-3 fw-normal">Correction in your existing PAN (Form 49A)</h4>
-                        <button type="button" class="w-100 btn btn-lg border text-white">Apply Now</button>
+                        <button type="button" class="btn border text-white">Apply Now</button>
                     </a>
                 </div>
             </div>
